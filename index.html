@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div id="header" class="jumbotron jumbrotron-fluid text-container bg-primary">
+        <h1 id="header-text" class="text-center text-white">Weather Dashboard</h1>
+        <div id="artist-credit"></div>
+    </div>
+
+    <div id="content" class="container-fluid">
+        <div class="row">
+            <div id="content-left" class="col-2">
+                <form>
+                    <label for="search-city">Search for a City:</label>
+                    <div class="form-row">
+                        <input id="search-city" class="form-control" name="city"></input>
+                        <button id="search-button" class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </form>
+                <div id="search-error"></div>
+                <ul id="city-results" class="list-group mt-3"></ul>    
+           </div>
+            <div id="content-right" class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h2><span id="currentCity">City</span><span id="currentDate">Date</span><span id="currentIcon">Icon</span></h2>
+                        <p>Temp: <span id="currentTemp"></span> °F</p>
+                        <p>Wind: <span id="currentWind"></span> MPH</p>
+                        <p>Humidity: <span id="currentHumidity"></span> %</p>
+                        <p>UV Index: <span id="currentUV"></span></p>
+                    </div>
+                </div>
+                <h3>5-Day Forecast:</h3>
+                <div class="row mx-auto">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="date1">Date</span></h5>
+                          <h6 class="card-subtitle"><span id="weather1">Icon</span></h6>
+                          <p>Temp: <span id="temp1"></span> °F</p>
+                          <p>Wind: <span id="wind1"></span> MPH</p>
+                          <p>Humidity: <span id="humidity1"></span> %</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="date2">Date</span></h5>
+                          <h6 class="card-subtitle"><span id="weather2">Icon</span></h6>
+                          <p>Temp: <span id="temp2"></span> °F</p>
+                          <p>Wind: <span id="wind2"></span> MPH</p>
+                          <p>Humidity: <span id="humidity2"></span> %</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="date3">Date</span></h5>
+                          <h6 class="card-subtitle"><span id="weather3">Icon</span></h6>
+                          <p>Temp: <span id="temp3"></span> °F</p>
+                          <p>Wind: <span id="wind3"></span> MPH</p>
+                          <p>Humidity: <span id="humidity3"></span> %</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="date4">Date</span></h5>
+                          <h6 class="card-subtitle"><span id="weather4">Icon</span></h6>
+                          <p>Temp: <span id="temp4"></span> °F</p>
+                          <p>Wind: <span id="wind4"></span> MPH</p>
+                          <p>Humidity: <span id="humidity4"></span> %</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="date5">Date</span></h5>
+                          <h6 class="card-subtitle"><span id="weather5">Icon</span></h6>
+                          <p>Temp: <span id="temp5"></span> °F</p>
+                          <p>Wind: <span id="wind5"></span> MPH</p>
+                          <p>Humidity: <span id="humidity5"></span> %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
