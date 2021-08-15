@@ -1,0 +1,7 @@
+#search-city {
+    text-transform: lowercase;
+}
+
+#search-city::first-letter {
+    text-transform: uppercase;
+}
