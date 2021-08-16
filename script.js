@@ -1,5 +1,6 @@
 let apiKey = "3d47311119b7b5ec8772c781e9cdddce";
 let city = "";
+let citySearches = JSON.parse(localStorage.getItem("search")) || [];
 
 $("#search-btn").on("click", function(event){
     event.preventDefault();
@@ -87,6 +88,7 @@ function getWeather() {
     })
 }
 
+
 function cityList() {
     let cityHistory = `<button type="button" class="list-group-item list-group-item-action active">${city}</button></li>`
     
@@ -96,5 +98,19 @@ function cityList() {
 }
 
 function saveSearch() {
-    city = $("#search-city").val().trim();
+    searchedCity = $('#search-city').val().trim();
+    
+    citySearches.push(searchedCity);
+    
+    localStorage.setItem('history', JSON.stringify(citySearches));
 }
+
+function displayHistory(){
+    for (i=0; i>citySearches.length; i++){
+    let historyBtn = `<button type="button" class="list-group-item list-group-item-action active">${citySearches}</button></li>`
+    $("#city-list").append(historyBtn)
+    console.log()
+    }
+}
+
+displayHistory();
