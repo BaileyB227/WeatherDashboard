@@ -6,8 +6,9 @@
 
   <h3 align="center">Weather Dashboard</h3>
 
+  ![Website Image](./WeatherDashboard.png)
+
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/BaileyB227/WeatherDashboard"><strong>Explore the docs »</strong></a>
     <br />
@@ -45,7 +46,7 @@
 
 ## About The Project
 
-![Dashboard Screnshot](./README.md)
+Made using primarily javascript, can check the weather and humidty of any city in the world, and are given a 5 day forecast.
 
 
 ### Built With
